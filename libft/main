@@ -1,0 +1,59 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: trponess <trponess@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/31 15:27:27 by trponess          #+#    #+#             */
+/*   Updated: 2018/04/04 19:03:34 by trponess         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "includes/libft.h"
+
+int		main(int argc, char** argv)
+{/*
+	int *arr;
+
+	arr = ft_arrnew(4);
+	arr[0] = 1;
+	arr[1] = 2;
+	arr[2] = 3;
+	arr[4] = 4;
+	void *vptr;
+	intmax_t *xptr;
+
+	vptr = &arr[0];
+	xptr = vptr;
+
+	ft_printf(" adress : %p first elem : %d\n adress: %p second elem : %d",xptr,  *xptr, xptr + 1, *(xptr + 1));*/
+/*
+	int **arr;
+
+	arr = ft_darrnew(2,2);
+	arr[0][0] = 1;
+	arr[0][1] = 2;
+	arr[1][0] = 3;
+	arr[1][1] = 4;*/
+	/*char **arr;
+	r = ft_dstrnew(2,2);
+	r[0][0] = '1';
+	r[0][1] = '2';
+	r[1][0] = '3';
+	r[1][1] = '4';
+*/
+	t_vector *f;
+
+	f = ft_vec_new();
+
+	ft_vec_push(f, 10);
+	ft_vec_push(f, 15);
+	ft_vec_push(f, 20);
+
+	ft_putarr(f->arr, f->len);
+
+
+	
+
+}

@@ -1,0 +1,34 @@
+THIS VERSION OF LIBFT IS NOT FINISHED
+ITS A PROTOTYPE
+ALL FUNCTIONS USE INT INSTEAD OF INTMAXT 
+SOME FUNCTIONS HAVE LEAKS AND COULD BE WRITTEN SMALLER 
+
+
+PHILOSOPHY : 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+all functions do their job, if you do something wrong undetermined behavour will happen
+two types are very frequently dealt with : t_x (intmax_t)
+                                            char
+no void type is used , only t_x and char , t_vector is used to act like strings for integers, there's a int size like '\0'
+
+arr convortors : you can't make an double array tab[0] : malloc(5) , tab[1] : (3) , tab[2] = malloc(7)
+    you must pick generla sizes ex . (10,2) (5, 5) (y , x)
+    except with ft_split that puts words into a double table
+
+optimization is not the specialty of this libft , 
+easier code use and lisibility is priority 
+
+when refering to a integer type which is anything than char , the word integer is used
+when refering to a string , other types arrays are refered as arr , strlen arrlen
+
+all functions that are universal have ft_
+static funtoins dont have   
+
+FUNCTIONS:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ft_counter : is a for loop. 
+            everytime the version is changed, it starts at 0 again.
+
+long_to_str : ft_atol_base / ft_ltoa_base
+str_to_long    

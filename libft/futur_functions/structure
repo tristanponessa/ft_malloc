@@ -1,0 +1,10 @@
+typedef struct		s_vector
+{
+	int				*arr;
+	int				len;
+	int				cap;
+	int				pos;
+	char			id[20];
+	struct s_vector	*next;
+	struct s_vector	*last;
+}					t_vector;
