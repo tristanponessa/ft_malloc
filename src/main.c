@@ -25,49 +25,65 @@ PROT_WRITE Pages may be written.
 MAP_SHARED
 
 
-typedef struct s_list {
-    struct s_list *next;
-    void *data;
-}              t_list;
-
 typedef struct s_box {
-    void *ptr;
+    void *madr;
     size_t len;
     int available;
+    struct s_box *next;
 }              t_box;
 
 //************************************************************************************
-t_list *ft_create_elem(void *data) {
 
-    t_list *elem;
+/*
+void *ft_mmap() {
 
-    elem = (t_list *)malloc(sizeof(t_list));
+    void *zone;
+
+    zone = (t_box *)mmap(madr, len, )
+    if (zone == NULL)
+        return NULL;
+}
+*/
+
+t_box *ft_create_elem(void *madr, size_t len) {
+
+    t_box *elem;
+
+    elem = (t_box *)mmap(madr, sizeof(t_box), PROT_READ | PROT_EXEC | PROT_WRITE, MAP_SHARED, 3 ,0);
+
+    elem->madr = data;
+
+
+
+
+    elem->size = len;
+    elem->available = 1;
     elem->next = NULL;
-    elem->data = data;
+
     return elem;
 }
 
-t_list *ft_list_last(t_list *blst) {
+t_box *ft_box_last(t_box *blst) {
 
     while (blst->next != NULL)
         blst = blst->next;
     return blst;
 }
 
-void ft_list_push_back(t_list **begin_lst, void *data) {
+void ft_box_push_back(t_box **begin_lst, void *data) {
 
-    t_list *blst = *begin_lst;
-    t_list *head = blst;
+    t_box *blst = *begin_lst;
+    t_box *head = blst;
     while (blst->next != NULL)
         blst = blst->next;
     blst->next = ft_create_elem(data);
     *begin_lst = head;
 }
 
-void ft_clear_lst(t_list **l) {
+void ft_clear_lst(t_box **l) {
 
-    t_list *blst = *l;
-    t_list *nxt;
+    t_box *blst = *l;
+    t_box *nxt;
     while (1) {
         if (blst->next == NULL)
             break;
@@ -79,7 +95,7 @@ void ft_clear_lst(t_list **l) {
     *l = NULL;
 }
 
-void print_lst(t_list *l) {
+void print_lst(t_box *l) {
 
     void *data;
     if (!l)
@@ -134,15 +150,11 @@ void *realloc(void *ptr, size_t size);
 
 int main() {
 
-    t_list *tiny_allocs;
-    t_list *small_allocs;
-    t_list *large_allocs;
+    t_box *tiny_allocs;
+    t_box *small_allocs;
+    t_box *large_allocs;
 
-
-
-
-
-
+    t_box *allocs;
 
 
 }
