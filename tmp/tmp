@@ -1,0 +1,10 @@
+void *mmap(void *addr, size_t length, int prot, int flags,
+           int fd, off_t offset);
+int munmap(void *addr, size_t length);
+
+
+PROT_READ  Pages may be read.
+PROT_EXEC  Pages may be executed.
+PROT_WRITE Pages may be written.
+//flag
+MAP_SHARED
