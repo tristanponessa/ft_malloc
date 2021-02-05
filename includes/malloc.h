@@ -17,7 +17,7 @@
 #define LARGE_MIN 33
 #define NB_ALLOCS 100
 
-t_box *l; //global
+
 
 
 #endif //MALLOC_MALLOC_H
