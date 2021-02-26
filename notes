@@ -1,0 +1,5 @@
+my malloc library will replace the systems, 
+ls and vim will each call an instance of malloc 
+create 2 lists of tiny and small allocations
+if i use the stack which has very little space, it will be saturated very fast
+heap must be used.
